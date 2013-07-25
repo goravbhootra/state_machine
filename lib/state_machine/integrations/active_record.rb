@@ -498,7 +498,7 @@ module StateMachine
         
         # Runs state events around the machine's :save action
         def around_save(object)
-          transaction(object) do
+          within_transaction(object) do
             object.class.state_machines.transitions(object, action).perform { yield }
           end
         end
