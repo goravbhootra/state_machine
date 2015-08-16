@@ -16,8 +16,9 @@ Gem::Specification.new do |s|
   s.rdoc_options      = %w(--line-numbers --inline-source --title state_machine --main README.md)
   s.extra_rdoc_files  = %w(README.md CHANGELOG.md LICENSE)
   s.license           = 'MIT'
+  s.required_ruby_version = '>= 1.9.3'
 
-  s.add_development_dependency("rake")
-  s.add_development_dependency("simplecov")
-  s.add_development_dependency("appraisal")
+  s.add_development_dependency 'bundler', '>= 1.7.6'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest', '>= 5.4'
 end
