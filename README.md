@@ -1190,25 +1190,6 @@ bundle install
 bundle exec rake test
 ```
 
-To run integration tests:
-
-```bash
-bundle install
-rake appraisal:install
-rake appraisal:test
-```
-
-You can also test a specific version:
-
-```bash
-rake appraisal:active_model-3.0.0 test
-rake appraisal:active_record-2.0.0 test
-rake appraisal:data_mapper-0.9.4 test
-rake appraisal:mongoid-2.0.0 test
-rake appraisal:mongo_mapper-0.5.5 test
-rake appraisal:sequel-2.8.0 test
-```
-
 ## Caveats
 
 The following caveats should be noted when using state_machine:
