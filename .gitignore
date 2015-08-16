@@ -6,3 +6,10 @@ coverage/
 /doc/
 test/*.log
 /Gemfile.lock
+/log/*
+!/log/.keep
+/tmp
+*.orig
+.DS_Store
+.scratch-pad
+*.rdb

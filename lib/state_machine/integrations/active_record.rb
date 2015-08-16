@@ -35,6 +35,10 @@ module StateMachine
     #   vehicle.ignite                    # => true
     #   vehicle.reload                    # => #<Vehicle id: 1, name: "Ford Explorer", state: "idling">
     # 
+    # *Note* that if you want a transition to update additional attributes of the record, 
+    # either the changes need to be made in a +before_transition+ callback or you need 
+    # to save the record manually.
+    #
     # == Events
     # 
     # As described in StateMachine::InstanceMethods#state_machine, event
@@ -467,7 +471,7 @@ module StateMachine
           define_helper :instance, <<-end_eval, __FILE__, __LINE__ + 1
             def initialize(*)
               super do |*args|
-                self.class.state_machines.initialize_states(self, :static => false)
+                self.class.state_machines.initialize_states(self)
                 yield(*args) if block_given?
               end
             end

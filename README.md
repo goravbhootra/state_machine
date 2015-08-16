@@ -913,7 +913,7 @@ class Vehicle
   # transitions defined from the source above
   def machine
     vehicle = self
-    @machine ||= Machine.new(vehicle, :initial => :parked, :action => :save) do
+    @machine ||= Machine.new(Vehicle, :initial => :parked, :action => :save) do
       vehicle.transitions.each {|attrs| transition(attrs)}
     end
   end
@@ -989,6 +989,22 @@ file to load:
 ...
 gem 'state_machine', :require => 'state_machine/core'
 ```
+
+### Translation (Internationalization)
+
+Add to your locale file, for example: config/locales/en.yml
+
+```
+en:
+  activerecord:
+    state_machines:
+      vehicle:
+        states:
+          parked: On parking
+        events:
+          ignite: Start engine
+```
+
 
 ## Tools
 
