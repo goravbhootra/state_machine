@@ -1,4 +1,4 @@
-# state_machine [![Code Climate](https://codeclimate.com/github/goravbhootra/state_machine/badges/gpa.svg)](https://codeclimate.com/github/goravbhootra/state_machine) [![Build Status](https://secure.travis-ci.org/goravbhootra/state_machine.png "Build Status")](http://travis-ci.org/shopperplus/state_machine)
+# state_machine [![Code Climate](https://codeclimate.com/github/goravbhootra/state_machine/badges/gpa.svg)](https://codeclimate.com/github/goravbhootra/state_machine) [![Build Status](https://secure.travis-ci.org/shopperplus/state_machine.png "Build Status")](http://travis-ci.org/shopperplus/state_machine)
 
 
 *state_machine* adds support for creating state machines for attributes on any
